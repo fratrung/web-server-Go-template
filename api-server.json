@@ -1,0 +1,22 @@
+{
+    "api-version": "1.0",
+    "base_url": "http://127.0.0.1:8080",
+    "endpoints": [
+        {
+            "path": "/home",
+            "method": "GET"
+        },
+        {
+            "path": "/contact",
+            "method": "GET"
+        },
+        {
+            "path": "/products",
+            "method": "GET"
+        },
+        {
+            "path": "/services",
+            "method": "GET"
+        }
+    ]
+}

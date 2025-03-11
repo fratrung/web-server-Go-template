@@ -1,0 +1,31 @@
+networks:
+  app-network: {}
+services:
+  admin-server:
+    build: ./adminserver
+    container_name: admin-server
+    environment:
+      DB_HOST: localhost
+      DB_NAME: myDB
+      DB_PASSWORD: passwordsecure
+      DB_PORT: 5432
+      DB_USER: user
+    networks:
+    - app-network
+    ports:
+    - 8081:8081
+  web-server:
+    build: ./webserver
+    container_name: web-server
+    environment:
+      DB_HOST: localhost
+      DB_NAME: myDB
+      DB_PASSWORD: passwordsecure
+      DB_PORT: 5432
+      DB_USER: user
+    networks:
+    - app-network
+    ports:
+    - 8080:8080
+volumes:
+  pgdata: {}

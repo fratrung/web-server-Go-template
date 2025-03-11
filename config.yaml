@@ -1,0 +1,12 @@
+database:
+  host: localhost
+  port: 5432
+  name: "myDB"
+  
+web-server:
+  port: 8080
+
+admin-server:
+  port: 8081
+
+  
