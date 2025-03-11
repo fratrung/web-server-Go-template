@@ -25,6 +25,7 @@ cd web-server-Go-template
 Before starting the server, modify the following files to set up the IP and port:
 - **.env** -> Contains credentials for the database. (database is not implemented actually)
 
+    **.env.example**
     ```bash
     DB_USER=user
     DB_PASSWORD=passwordsecure

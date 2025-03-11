@@ -7,15 +7,11 @@
             "method": "GET"
         },
         {
-            "path": "/contact",
-            "method": "GET"
-        },
-        {
             "path": "/products",
             "method": "GET"
         },
         {
-            "path": "/services",
+            "path": "/contacts",
             "method": "GET"
         }
     ]
