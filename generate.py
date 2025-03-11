@@ -15,8 +15,7 @@ def get_config():
     db_port = config['database']['port']
     db_name = config['database']['name']
     web_port = config['web-server']['port']
-    admin_port = config['admin-server']['port']
-    return db_user, db_password, db_name,db_host, db_port, web_port, admin_port
+    return db_user, db_password, db_name,db_host, db_port, web_port
 
 
 def generate_api(addrs="127.0.0.1", port=8080):
@@ -156,7 +155,7 @@ def generate_golang_code(api_config):
     generate_code_main_go(api_config)
     
 
-def generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_port, admin_port):
+def generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_port):
     compose = {
         "services": {
             "web-server": {
@@ -172,20 +171,6 @@ def generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_
                     "DB_NAME": db_name
                 },
                 "networks":["app-network"]
-            },
-            "admin-server": {
-                "build": "./adminserver",
-                "container_name": "admin-server",
-                "ports": [f"{admin_port}:8081"],
-                #"depends_on": ["db"],
-                "environment": {
-                    "DB_HOST": db_host,
-                    "DB_PORT": db_port,
-                    "DB_USER": db_user,
-                    "DB_PASSWORD": db_password,
-                    "DB_NAME": db_name
-                },
-                "networks": ["app-network"]
             },
             
         },
@@ -206,12 +191,12 @@ def generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_
     
 if __name__ == "__main__":    
     
-    db_user, db_password, db_name,db_host, db_port, web_port, admin_port = get_config()
+    db_user, db_password, db_name,db_host, db_port, web_port= get_config()
     generate_api(port=web_port)
     
     with open("api-server.json","r") as api_file:
         api_config = json.load(api_file)   
         
     generate_golang_code(api_config=api_config)
-    generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_port, admin_port)
+    generate_docker_compose(db_user, db_password, db_name,db_host, db_port, web_port)
     

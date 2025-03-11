@@ -6,7 +6,6 @@ database:
 web-server:
   port: 8080
 
-admin-server:
-  port: 8081
+
 
   
