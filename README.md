@@ -21,11 +21,12 @@ Download the repository from Git:
 git clone https://github.com/fratrung/web-server-Go-template.git
 cd web-server-Go-template
 ```
+Rename **.env.example** in **.env**
+
 ### 2. Configurations
 Before starting the server, modify the following files to set up the IP and port:
 - **.env** -> Contains credentials for the database. (database is not implemented actually)
-
-    **.env.example**
+    **example**
     ```bash
     DB_USER=user
     DB_PASSWORD=passwordsecure
