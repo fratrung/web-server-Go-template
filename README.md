@@ -35,12 +35,12 @@ Before starting the server, modify the following files to set up the IP and port
 
     ```yaml
     database:
-    host: localhost
-    port: 5432
-    name: "myDB"
+        host: localhost
+        port: 5432
+        name: "myDB"
     
     web-server:
-    port: 8080
+        port: 8080
     ```
 ### 3. Create Python virtual environment
 This project includes a Python script that generates the server code.
