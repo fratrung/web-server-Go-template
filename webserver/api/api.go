@@ -26,7 +26,6 @@ func (s *APIWebServer) Run() error {
 
     router.HandleFunc("GET /home", handler.HandleHome)
     router.HandleFunc("GET /products", handler.HandleProducts)
-    router.HandleFunc("GET /contacts", handler.HandleContacts)
     
 	middlewareChain := middleware.MiddlewareChain(
 		middleware.RequestLoggerMiddleware,

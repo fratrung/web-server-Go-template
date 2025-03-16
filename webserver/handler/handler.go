@@ -25,12 +25,3 @@ func HandleProducts(w http.ResponseWriter, r *http.Request) {
 	tmpl.Execute(w, nil)
 }
         
-func HandleContacts(w http.ResponseWriter, r *http.Request) {
-    tmpl, err := template.ParseFiles("templates/contacts.html")
-	if err != nil {
-		http.Error(w, "Errore nel caricamento della pagina", http.StatusInternalServerError)
-		return
-	}
-	tmpl.Execute(w, nil)
-}
-        

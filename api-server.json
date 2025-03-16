@@ -9,10 +9,6 @@
         {
             "path": "/products",
             "method": "GET"
-        },
-        {
-            "path": "/contacts",
-            "method": "GET"
         }
     ]
 }
