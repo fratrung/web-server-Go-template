@@ -33,7 +33,7 @@ Before starting the server, modify the following files to set up the IP and port
     DB_USER=user
     DB_PASSWORD=passwordsecure
     ```
-- **config.yaml** -> Define server settings and environment variables for database.
+- **config.yaml** -> Define server settings and environment variables for database and web server.
 
     ```yaml
     database:
