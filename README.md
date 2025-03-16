@@ -60,7 +60,7 @@ source env/bin/activate
 
  - **On Windows**:
 ```bash
-env/bin/activate
+env/Scripts/Activate
  ``` 
 
 ### 4. Generate the server code
