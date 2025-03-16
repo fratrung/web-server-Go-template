@@ -21,9 +21,9 @@ Download the repository from Git:
 git clone https://github.com/fratrung/web-server-Go-template.git
 cd web-server-Go-template
 ```
-Rename **.env.example** in **.env**
-
-Rename **config.example.yaml** in **config.yaml**
+Rename:
+- **.env.example** -> **.env**
+- **config.example.yaml** -> **config.yaml**
 
 ### 2. Configurations
 Before starting the server, modify the following files to set up the IP and port:
